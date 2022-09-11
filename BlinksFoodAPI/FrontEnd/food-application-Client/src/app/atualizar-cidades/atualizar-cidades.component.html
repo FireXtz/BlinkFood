@@ -1,0 +1,13 @@
+<h3>Atualizar cadastro de Cidades</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      
+      <label for="name">Cidade</label>
+      <input type="text" class="form-control" id="Cidade" required [(ngModel)]="cidade.cidade" name="cidade">
+
+
+    </div>
+  <button type="submit" class="btn btn-success">Atualizar</button>
+  </form>
+</div>

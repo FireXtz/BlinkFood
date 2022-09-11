@@ -1,0 +1,16 @@
+<h3>Adcionar Cidades ao BlinkFood</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Informe o nome da cidade para cadastro</label>
+      <input type="text" class="form-control" id="cidades" required [(ngModel)]="cidade.cidade" name="cidades">
+    </div>
+
+  <button type="submit" class="btn btn-success">Cadastrar</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>O cadastro foi concluido com sucesso!</h4>
+  <!-- <button class="btn btn-success" (click)="novaCidade()">Adcionar uma cidade</button> -->
+</div>

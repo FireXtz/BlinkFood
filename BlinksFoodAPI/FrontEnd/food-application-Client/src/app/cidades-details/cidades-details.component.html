@@ -1,0 +1,15 @@
+<h2>Detalhes da Cidade cadastrada</h2>
+
+<hr/>
+<div *ngIf="cidade">
+  <div>
+    <label><b>id: </b></label> {{cidade.id}}
+  </div>
+  <div>
+    <label><b>Cidade: </b></label> {{cidade.cidade}}
+  </div>
+
+
+<br>
+<br>
+<button (click)="listar()" class="btn btn-primary">Retornar para a listagem de cidades</button><br>

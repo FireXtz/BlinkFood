@@ -1,0 +1,27 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Lista de Cidades</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Cidade</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ci of cidades | async">
+          <td>{{ci.id}}</td>
+          <td>{{ci.cidade}}</td>
+          <td><button (click)="removerCidades(ci.id)" class="btn btn-danger">Remover</button>
+              <button (click)="cidadeDetails(ci.id)" class="btn btn-info" style="margin-left: 10px">Detalhes</button>
+              <button (click)="atualizarCidade(ci.id)" class="btn btn-primary" style="margin-left: 10px">Atualizar</button>
+              <router-outlet></router-outlet>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
